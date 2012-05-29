@@ -1,0 +1,99 @@
+/ layout.haml
+/ Website for JBO Landscaping
+/ May 2012
+/ © Higgs Systems 2012
+
+/ HAML and IE compatibility:
+/ http://ricostacruz.com/2010/haml_and_ie_compatibility.html
+
+!!!
+%html
+  %head 
+    %title JBO Landscaping
+    %link(rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css")
+    %link(rel="stylesheet" href="css/styles.css")
+    %script{src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
+    %script{src: 'script.js'} -# uses script.js in 'public' folder
+  %body
+    %img{:src=>"butterfly.png", :alt=>"butterfly ", :height=>128, :width=>128, :title=>"butterfly", :id=>"butterfly"}
+    %img{:src=>"bamboo_leaves2.png", :alt=>"leaves2 ", :height=>195, :width=>175, :title=>"leaves2", :id=>"leaves2"}
+
+    #wrap
+      #header
+        %h1.CompanyName JBO Landscaping
+        %img{:src=>"holly_leaves.png", :alt=>"holly-leaves ", :height=>150, :width=>150, :title=>"holly-leaves", :id=>"holly-leaves"}
+        %hr
+        %p#Address 11997 Hawthorne Drive, Sagamore Hills, OH 44067
+        %p#Phone 216.392.1392    
+      / #nav
+      /   %ol
+      /     %a(href="/")
+      /       %li#home Home
+      /     %a(href="about")
+      /       %li#about About 
+      /     %a(href="contact")
+      /       %li#contact Contact
+            
+      #main
+        #content
+          =yield
+
+        #side_bar
+          %img{:src=>"PencilOverStickies2.png", :alt=>"contact_us ", :height=>80, :width=>600, :title=>"contact_us", :id=>"contact_us"}
+          %h1 Contact Us
+          #side_bar_content
+            %p Please fill in the following form if you would like to contact us.
+            %form{action: "/", method: "post", class: "cmxform"}
+              %fieldset
+                %legend Contact Details
+                %ol
+                  %li
+                    %label.label{for: "name"} Your Name: <em>*</em>
+                    %input{type: "text", name: "name", class: "text"}
+                  %li
+                    %label.label{for: "email"} Your Email: <em>*</em>
+                    %input{type: "text", name: "email", class: "text"}
+                  %li
+                    %label.label{for: "phone"} Your Phone:
+                    %input{type: "text", name: "phone", class: "text"}                    
+                  %li
+                    %label.label{for: "message"} Your Message:
+                    %textarea{name: "message", rows: "12", cols: "32", id: "message"}
+                %div
+                  %input{type: "submit", value: "Send", class: "button", id: "contact-submit"}
+                  %span#confirmation At your service
+
+            / %p
+            /   %img{:src=>"pen-ink.png", :alt=>"ink splatter ", :height=>130, :width=>300, :title=>"splatter", :id=>"splatter"}
+            %img{src: 'dragonfly.png', alt: 'dragonfly ', height: 120, width: 180, title: 'dragonfly', id: 'dragonfly'}
+            %img{src: 'Icon_Email.png', alt: 'icon-email ', height: 80, width: 80, title: 'icon-email', id: 'icon-email'}
+
+          #add_description
+            %h2
+            %hr
+            %img{src: 'sunflower1.png', alt: 'icon-email ', height: 120, width: 160, title: 'icon-email', id: 'sunflower1'}
+            %p
+            %img{:src=>"wheelbarrow.png", :alt=>"wheelbarrow ", :height=>225, :width=>225, :title=>"wheelbarrow", :id=>"wheelbarrow"}
+            / %img{src: 'sunflower1.png', alt: 'icon-email ', height: 120, width: 160, title: 'icon-email', id: 'sunflower1'}
+
+    #footer
+      %img{:src=>"flower_grass.png", :alt=>"flower_grass ", :height=>180, :width=>225, :title=>"flower_grass", :id=>"flower_grass_big"}
+      %img{:src=>"bird.png", :alt=>"bird ", :height=>120, :width=>180, :title=>"bird", :id=>"bird_big"}
+      %table
+        %tr
+          %td
+            %img{:src=>"flower_grass.png", :alt=>"flower_grass ", :height=>100, :width=>225, :title=>"flower_grass", :id=>"flower_grass"}
+          %td
+            %h3#slogan Serving South-East Cleveland's Home &amp Business Landscaping Needs since 2004 
+          %td
+            %img{:src=>"bird.png", :alt=>"bird ", :height=>100, :width=>150, :title=>"bird", :id=>"bird"}
+      #footer2
+        %table
+          %tr
+            %td#company Higgs Systems, © 2012
+            %td#technology Powered by Ruby, Sinatra, Haml &amp jQuery
+
+    
+    
+    
+        

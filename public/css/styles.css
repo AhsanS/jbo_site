@@ -1,0 +1,257 @@
+/*
+ index.haml
+ Website for JBO Landscaping
+ May 2012
+ © Higgs Systems 2012
+
+ CSS Sticky Footer: http://www.cssstickyfooter.com/
+*/
+
+/* ------ */
+/* LAYOUT */
+/* ------ */
+
+/** {margin:0;padding:0;}*/
+html, body {height: 100%;}
+
+/*body{
+	background-image: -webkit-linear-gradient(#F5F5DC, #FCFCF4);
+	background-image: -moz-linear-gradient(#F5F5DC, #FCFCF4);
+	background-image: -o-linear-gradient(#F5F5DC, #FCFCF4);
+	background-image: -ms-linear-gradient(#F5F5DC, #FCFCF4);
+	background-image: linear-gradient(#F5F5DC, #FCFCF4);
+}*/
+
+body{
+	background-image: -webkit-linear-gradient(#FFFFFF, #F2E3CF);
+	background-image: -moz-linear-gradient(#FFFFFF, #F2E3CF);
+	background-image: -o-linear-gradient(#FFFFFF, #F2E3CF);
+	background-image: -ms-linear-gradient(#FFFFFF, #F2E3CF);
+	background-image: linear-gradient(#FFFFFF, #F2E3CF);
+}
+
+#butterfly{position:absolute; left:12px; top:8px;}
+#leaves2{position:absolute; right:0px; top:0px;}
+
+#wrap {min-height: 100%; margin:auto; width:75%;}
+
+#header    {background-color:#C4D2A7; z-index: 4; overflow: hidden; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px;}
+#header>h1 {color:green; font-size:300%; margin: 8px 12px 8px 32px; text-shadow: 1px 1px Black; white-space: nowrap; display: inline;}
+#header>#holly-leaves{margin:-28px 0 -90px -32px;}
+#header>p  {color:#7A9939; font-size:120%; font-family:sans-serif; margin: 0 12px;}
+p#Address  {opacity:0.6; font-size:96%; padding: 0px 20px; margin-top: -32px; color: black; white-space: nowrap; text-align: right;}
+p#Phone    {font-size:175%; font-family:sans-serif; margin: 8px 32px 24px 32px; opacity:0.8; color: MediumVioletRed;  text-align: right;}
+
+#nav ol{padding-top:8px; padding-left:24px; background-color:#C4D2A7; display:block; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px;}
+#nav a {text-decoration:none;}
+#nav li       {color:yellow; text-align:center; display:inline; padding:5px 10px 5px 10px; margin-left:8px; background-color: #69a; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; cursor: default;}
+#nav li:hover {color:white; border-top:solid 2px red; background-color: Black; cursor:inherit;}
+#nav li.currentpage       {color:yellow; border-bottom:solid 2px red; cursor: default; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
+#nav li.currentpage:hover {color:yellow; border-top:solid 0px red; border-bottom:solid 2px red; background-color: #69a;}
+
+.thispage{visibility: hidden;}
+
+
+#main {overflow:visible;
+	padding-bottom: 130px;}  /* must be same height as the footer */
+	
+#content{margin:36px 0; float:left; background-color: #F8F8E6; box-shadow: 8px 8px 24px DarkGray; border-radius: 24px 24px; z-index:4;
+    /*  GRADIENT BACKGROUND  */
+    background-image: -webkit-linear-gradient(#FCFCF4, #F5F5DC);
+}
+
+/* #service_navigation_instruction{width: 100%;} */
+#service_navigation_instruction>p{margin: 8px 0 4px 64px; color: #f00; font-style: italic; display: none;}
+
+/*#servicesList{padding: 0 8px;}*/
+
+/* #side_bar{margin:12px 0; width :30%; float:right; clear:none; right:16px; color: DarkGray; padding-top: 36px;} */
+#side_bar{margin:36px 0px; width :auto; float: right; color: #666666; padding-top: 0px; box-shadow: 8px 8px 24px DarkGray; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px;  z-index:4;
+    /*  GRADIENT BACKGROUND  */
+    background-image: -webkit-linear-gradient(#A6BB7B, #FFFFFF);
+}
+#side_bar>h1{
+	z-index:4;
+	font-size:200%;
+	color: Peru; /*#FFFF80;*/ /*DarkGoldenRod*/
+	text-shadow: 1px 1px DarkOliveGreen;
+	position:relative;
+	top:-64px;
+	padding-left: 24px;
+	padding-bottom: 8px;
+}
+/*#side_bar>img#holly-leaves{display: none;}*/
+#side_bar_content {margin: 0px 48px 16px 64px;}
+/*#splatter{margin-top: 16px;}*/
+#side_bar_content>p{margin-bottom: 16px;}
+
+
+/*label
+{
+width: 4em;
+float: left;
+text-align: right;
+margin-right: 0.5em;
+display: block
+}
+
+.submit input
+{
+margin-left: 4.5em;
+} 
+input
+{
+color: #781351;
+background: #fee3ad;
+border: 1px solid #781351
+}
+
+.submit input
+{
+color: #000;
+background: #ffa20f;
+border: 2px outset #d7b9c9
+} */
+
+
+#side_bar_content p{
+	color: DarkGreen;
+}
+
+form.cmxform fieldset {
+  margin-bottom: 10px;
+  color: DarkOliveGreen;
+}
+form.cmxform legend {
+  padding: 0 2px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: DarkGoldenRod;
+}
+form.cmxform label {
+  display: inline-block;
+  line-height: 1.8;
+  vertical-align: top;
+  /*text-align: right;*/
+}
+form.cmxform fieldset ol {
+  margin: 0;
+  padding: 0;
+}
+form.cmxform fieldset li {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+}
+
+form.cmxform em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+form.cmxform label {
+  width: 110px; /* Width of labels */
+}
+
+form.cmxform fieldset ol li input
+{
+	background: #FFFFE0; /*#fee3ad;*/
+	width: 260px;
+	margin-right: 4px;
+	font-family: "Lucida Console";
+	font-size: 0.9em;
+	padding: 3px 2px 1px 2px;
+	style: "color:Grey";
+}
+
+form.cmxform fieldset ol li textarea
+{
+	background: #FFFFE0; /*#fee3ad;*/
+	padding: 4px;
+	color: Grey;
+	font-family: "Lucida Console";
+	font-size: 0.9em;
+}
+
+/*The Contact Form Submit Button*/
+form.cmxform fieldset #contact-submit
+{
+	margin: 14px 0 0 44px;
+	padding: 2px 0;
+	width: 64px;
+	background: OliveDrab; /*DarkOliveGreen*/;
+	color: white; /*yellow; *//*#FFFFFF;*/
+	z-index: 7;
+}
+
+#side_bar_content #confirmation{color: green; font-weight: bold; margin: 10px 0 0 16px; display: none;}
+/* #side_bar_content textarea{} */
+
+.red-bordered {
+    border: 4px solid red;
+}
+
+#icon-email{float: right; display: none;}
+#sunflower1{float: left; display: inline; margin: 12px 0 0 -50px;}
+
+#dragonfly{margin-left: -100px;}
+
+#contact_us{border-bottom: solid; border-bottom-color: #97B065; border-bottom-width:medium;}
+/*#add_description{position: absolute;}*/
+#services_description{display: none;}
+#add_description{display: none;}
+#add_description>h2{margin: -16px 0px 8px 30px; font-size: 175%; color: Green; font-weight: bold;}
+#add_description>hr{margin: -2px 40px 0 30px; color: olive; font-size: 120%;}
+#add_description>p{margin: 24px 40px 0 50px; color: olive; font-size: 120%;}
+
+
+#footer {position: relative;
+	margin-top: -130px; /* negative value of footer height */
+	height: 130px; clear:both;
+	z-index: 5;
+} 
+#footer>table{color:Wheat; font-style:oblique; font-family:Arial, Verdana, serif; width:96%; margin-left:24px; margin-right:24px;}
+#footer2{clear:both; background-color:OliveDrab; font-size:75%; font-family:sans-serif; color:#333; border-top:solid 2px green; border-bottom:solid 1px OliveDrab}
+#footer2>table{color:Wheat; font-style:oblique; font-family:Arial, Verdana, serif; width:96%; margin-left:24px; margin-right:24px;}
+#flower_grass{padding-top: 10px; left:0px; z-index:-1; opacity:0.9;}
+#slogan{font-size: 80%; margin-right: -16px; padding-top: 93px; text-align: center; color: Sienna; white-space: nowrap;}
+#bird{margin-right: -74px; padding-top: 10px; z-index:-1; padding-right: 16px;}
+#company{margin-left: 8px; text-align:left;}
+#technology{margin-right: 8px; text-align:right; color:silver;}
+
+#flower_grass_big{display:none;}
+#bird_big{display:none;}
+
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;
+}
+
+
+/* ----- */
+/* INDEX */
+/* ----- */
+
+#services>h1      {color:White; background-color:OliveDrab; font-size:200%; padding-top: 12px; padding-left: 24px; padding-bottom: 12px;}
+#services ol      {margin: 16px 48px 0px 48px;}
+#services li      {font-size:120%; color: OliveDrab; list-style: square outside none; padding: 0px 0px 4px 2px; font-style: normal;}
+#services li:hover{color: OrangeRed; cursor: default; font-style: italic;}
+
+/*#services>ol>#services2{margin: 0px 48px 0px 16px;}*/
+/*#services2{margin-top: -16px;}
+#services2{margin-left: -32px;}*/
+#services2{margin: -16px 0 2px -32px;}
+#services2 li{font-size:85%; font-style: italic; color: OliveDrab; list-style: circle outside none;padding: 0px 0px 3px 3px;}
+#services2 li:hover{font-weight: bold;}
+
+#leaf{position:absolute; opacity:0.5;
+	  visibility: hidden; /* hide if JavaScript turned off */
+}
+
+#wheelbarrow{float: right;}
+
+
