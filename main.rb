@@ -4,11 +4,14 @@
 # © Higgs Systems 2012
 
 require 'sinatra'
-require 'dm-core'
-require 'dm-validations'
-require 'logger'
+require 'haml'
+# require 'dm-core'
+# require 'dm-validations'
+# require 'logger'
 require 'pony'
 
+# require 'bundler'
+# Bundler.require
 
 set :pages, %w[about contact]
 

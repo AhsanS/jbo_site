@@ -1,4 +1,5 @@
 source :rubygems
 gem "sinatra"
-gem "pony"
+gem "haml"
 gem "thin"
+gem "pony"
