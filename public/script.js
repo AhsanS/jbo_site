@@ -1,12 +1,17 @@
 // script.js
 // jQuery script file for 'JBO Landscaping' website
 // Created: April 25, 2012
-// Updated: May 9, 2012
+// Updated: May 30, 2012
 
 jQuery(document).ready(function(event) {
 
   var page = ''; // 'global'
   var inSubmission = false;
+  var minGapBetweenContentAndSidebar = 8; // pixels
+  var contentWidth = $('#content').outerWidth();
+  var sidebarWidth = $('#side_bar').outerWidth();
+  var totalWidthOfContentAndSidebar = contentWidth + sidebarWidth + minGapBetweenContentAndSidebar;
+  
   houseKeeping();
   positionLeafSketch();
   positionSideBar();
@@ -132,7 +137,11 @@ jQuery(document).ready(function(event) {
       }
     });
 
-    // Make ervice_navigation_instruction visible if JavaScript is enabled
+    // Set min/max width
+    $('#header').css('min-width', totalWidthOfContentAndSidebar);
+    $('#wrap').css('max-width', totalWidthOfContentAndSidebar+3*minGapBetweenContentAndSidebar);
+
+    // Make service_navigation_instruction visible if JavaScript is enabled
     $('#service_navigation_instruction').css('background', '#FFFF99');
     $('#service_navigation_instruction>p').css({'display': 'block'}).fadeTo(0,0).fadeTo(1000, 1.0).fadeTo(1000, 0).fadeTo(1000, 1.0).fadeTo(1000, 0).fadeIn('slow', function(){$('#service_navigation_instruction').css('background', 'transparent');}).fadeTo(1000,1);
 
@@ -224,18 +233,14 @@ jQuery(document).ready(function(event) {
       var h = $('#services').height();
       var w2 = $('#leaf').width();
       var h2 = $('#leaf').height();
-      var pos2 = {left: pos.left+w-w2+5, top: pos.top+h-h2+25};
+      var pos2 = {left: pos.left+w-w2+6, top: pos.top+h-h2+26};
       $('#leaf').css(pos2).show();
     }
   }
 
 
   function positionSideBar(){
-    var minGapBetweenContentAndSidebar = 8; // pixels
     var mainWidth = $('#main').outerWidth();
-    var contentWidth = $('#content').outerWidth();
-    var sidebarWidth = $('#side_bar').outerWidth();
-    var totalWidthOfContentAndSidebar = contentWidth + sidebarWidth + minGapBetweenContentAndSidebar;
     var contentRightEdge = $('#content').offset().left + contentWidth;
     var sidebarLeftEdge = $('#side_bar').offset().left;
     var contentTop = $('#content').offset().top - 36;
@@ -251,13 +256,13 @@ jQuery(document).ready(function(event) {
       $('#side_bar').css({left: sidebarAtRightEdgeOfMain, top: contentTop, width: sidebarWidth}).show();
 
     setSideBarHeight();
-    positionWheelbarrow();
+    positionWheelbarrow();    
   }
 
   function setSideBarHeight(){
     var contentHeight = $('#content').height();
     var sidebarHeight = $('#side_bar').height();
-    if(sidebarHeight < contentHeight)
+    /* if(sidebarHeight < contentHeight) */
       $('#side_bar').height(contentHeight);
 
     positionDragonfly();
@@ -285,7 +290,7 @@ jQuery(document).ready(function(event) {
       $('#dragonfly').css({position: 'absolute', left: pos2.left+'px', top: pos2.top+'px'}); // THIS WORKS!
 
 
-      $('#icon-email').css({position: 'absolute', left: 24+'px', top: pos2.top+32+'px', opacity: 0.2, display: 'block'})
+      $('#icon-email').css({position: 'absolute', left: 24+'px', top: pos2.top+32+'px', display: 'block'})
       ;
   }
 
