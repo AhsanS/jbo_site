@@ -86,33 +86,6 @@ p#Phone    {font-size:175%; font-family:sans-serif; margin: 8px 32px 24px 32px; 
 #side_bar_content>p{margin-bottom: 16px;}
 
 
-/*label
-{
-width: 4em;
-float: left;
-text-align: right;
-margin-right: 0.5em;
-display: block
-}
-
-.submit input
-{
-margin-left: 4.5em;
-} 
-input
-{
-color: #781351;
-background: #fee3ad;
-border: 1px solid #781351
-}
-
-.submit input
-{
-color: #000;
-background: #ffa20f;
-border: 2px outset #d7b9c9
-} */
-
 
 #side_bar_content p{
 	color: DarkGreen;
