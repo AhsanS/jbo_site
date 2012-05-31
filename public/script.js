@@ -139,7 +139,7 @@ jQuery(document).ready(function(event) {
 
     // Set min/max width
     $('#header').css('min-width', totalWidthOfContentAndSidebar);
-    $('#wrap').css('max-width', totalWidthOfContentAndSidebar+3*minGapBetweenContentAndSidebar);
+    $('#wrap').css('max-width', totalWidthOfContentAndSidebar+5*minGapBetweenContentAndSidebar);
 
     // Make service_navigation_instruction visible if JavaScript is enabled
     $('#service_navigation_instruction').css('background', '#FFFF99');
@@ -147,6 +147,7 @@ jQuery(document).ready(function(event) {
 
     // Make leaf_sketch visible if JavaScript is enabled
     $('#leaf').css('visibility', 'visible');
+    $('#frog').css('visibility', 'visible');
     
     // Make wheelbarrow visible if JavaScript is enabled
     $('#wheelbarrow').css('visibility', 'visible');
@@ -235,6 +236,11 @@ jQuery(document).ready(function(event) {
       var h2 = $('#leaf').height();
       var pos2 = {left: pos.left+w-w2+6, top: pos.top+h-h2+26};
       $('#leaf').css(pos2).show();
+      
+      // Position FROG too!
+      var pos3 = {left: pos.left-$('#frog').width()+30, top: pos.top+80};
+      $('#frog').css(pos3).show();
+
     }
   }
 

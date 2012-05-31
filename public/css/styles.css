@@ -228,6 +228,9 @@ body:before {
 #leaf{position:absolute; opacity:0.5;
 	  visibility: hidden; /* hide if JavaScript turned off */
 }
+#frog{position:absolute;
+	  visibility: hidden; /* hide if JavaScript turned off */
+}
 
 #wheelbarrow{float: right;}
 
