@@ -232,6 +232,6 @@ body:before {
 	  visibility: hidden; /* hide if JavaScript turned off */
 }
 
-#wheelbarrow{float: right;}
+#wheelbarrow{float: right; display: inline}
 
 
